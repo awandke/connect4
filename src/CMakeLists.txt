@@ -1,7 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
+file(GLOB SOURCE_LIST CONFIGURE_DEPENDS
+        "${connect4_SOURCE_DIR}/src/*.cpp")
 
-# set the project name
-project(connect4 VERSION 1.0)
-
-# add the executable
-add_executable(connect4 main.cpp)
+add_library(src ${SOURCE_LIST} ${HEADER_LIST})
+target_include_directories(src PUBLIC ../include)

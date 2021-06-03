@@ -1,4 +1,5 @@
 #include <iostream>
+#include "test_class.h"
 
 using std::cout;
 using std::endl;
